@@ -6,8 +6,8 @@ import Home from './pages/home'
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light:"#464557",
-      main: "#1e1e2e",
+      light:"#403556",
+      main: "#180f2d",
       dark:"#000004",
       contrastText:"#ffffff"
     },
