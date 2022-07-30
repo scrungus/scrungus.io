@@ -58,6 +58,16 @@ const useStyles = makeStyles((theme) =>
       fontWeight : 400
     },
 
+    italics: {
+      fontWeight : 400,
+      fontStyle:"italic"
+    },
+
+    bold: {
+      fontWeight : 400,
+      fontStyle:"bold"
+    },
+
     card: {
       backgroundColor:"transparent"
     },
@@ -86,7 +96,11 @@ const useStyles = makeStyles((theme) =>
 
     drawerIcon: {
       color: theme.palette.primary.contrastText
-    }
+    },
+
+    divider: {
+      background: theme.palette.background.light,
+  },
   }))
 
 /*    */
@@ -111,22 +125,36 @@ export default function Home() {
               <Grid item xs></Grid>
               <Grid item xs></Grid>
               <Grid item xs>
-                    <Typography className={classes.text} variant="h4" align="center">
-                        TYLER CHRISTIE
-                    </Typography>
-                      <Box m={1}>
-                        <Divider variant="middle"></Divider>
-                      </Box>
-                    <Typography className={classes.text} variant="body1" align="center">
-                      Data Science, Microservice and Blockchain Development.
+                  <Grid container>
+
+                    <Grid item>
+                      <Typography className={classes.text} variant="h4" align="center">
+                          TYLER CHRISTIE
+                      </Typography>
+                        <Box m={1}>
+                          <Divider variant="middle"></Divider>
+                        </Box>
+                    </Grid>
+
+                    <Grid item>
+                      <Typography className={classes.text} variant="body1" align="center">
+                        Data Science, DevOps and Software Development.
+                      </Typography>
+                    </Grid>
+
+                    <Grid item>
+                      <div>
                       <Button variant="link" href="https://github.com/scrunguss">
-                        <Avatar variant='circular' alt="scrungus" src={process.env.PUBLIC_URL + '/img/github.png'}> </Avatar>
+                          <Avatar variant='circular' alt="scrungus" src={process.env.PUBLIC_URL + '/img/github.png'}> </Avatar>
+                        </Button>
+                        <Button variant="link" href="https://www.linkedin.com/in/tyler-christie-1b325a155/">
+                          <Avatar className={classes.sizeLIAvatar} variant="rounded" alt="scrungus" src={process.env.PUBLIC_URL + '/img/in.png'}> </Avatar>
                       </Button>
-                      <Button variant="link" href="https://www.linkedin.com/in/tyler-christie-1b325a155/">
-                        <Avatar className={classes.sizeLIAvatar} variant="rounded" alt="scrungus" src={process.env.PUBLIC_URL + '/img/in.png'}> </Avatar>
-                      </Button>
-                    </Typography>
-                    
+                      </div>
+                    </Grid>
+
+                  </Grid>  
+
               </Grid>
               <Grid item xs={2} align="left">
                 <Avatar className={classes.sizeAvatar} variant='circular' alt="scrungus" src={process.env.PUBLIC_URL + '/img/scrunguspp.png'}> </Avatar>
@@ -143,7 +171,7 @@ export default function Home() {
                         MY WORK
                       </Typography>
                       <Typography variant="body2">
-                        I am a 2nd year CS student at University of Bath, confident in my ability to pick up on other people’s code and learn new languages with speed. I have previously received an offer from GCHQ, however I am now looking towards Data Science and Software Development. I have currently been accepted into an internship for Jibrel Network in Dubai and following that, I would look to further my experience with Blockchain and other technologies I find interesting.
+                      I am a recent Computer Science graduate from the University of Bath, specialising in Machine Learning with special interest in the area of Reinforcement Learning and investigating efficient exploration strategies for sparse reward environments or large state-action spaces. Interested in roles involving backend development, full-stack, FinTech, blockchain technology and machine learning.
                       </Typography>
                       <Box m={1}>
                           <Divider variant="middle" ></Divider>
@@ -250,7 +278,9 @@ export default function Home() {
                                 Elixir
                               </ListItemText>
                             </ListItem>
-                            <ListItem></ListItem>
+                            <ListItem>
+
+                            </ListItem>
                           </List>
                         </Grid>
                       </Grid>
@@ -272,19 +302,73 @@ export default function Home() {
                               <li>Data Science - SciKit-Learn, NumPy, Keras </li>
                             </ul>
                             <li>Linux</li>
+                            <li>Tensorflow</li>
+                            <li>React</li>
                           </ul>
                         </Grid>
                         <Grid item xs={6}>
                           <ul>
-                            <li>Microservice Architecture</li>
+                            <li>Kubernetes</li>
                             <li>Nginx</li>
                             <li>Azure DevOps</li>
                             <li>Truffle Suite</li>
                             <li>LaTeX</li>
                             <li>TeamCity</li>
                             <li>.NET Framework</li>
+                            <li>PyTorch</li>
                           </ul>
                         </Grid>
+                      </Grid>
+                      <Box m={1}>
+                          <Divider variant="middle" ></Divider>
+                        </Box>
+                      <Typography className={classes.bioTitles} variant="h6">
+                        EDUCATION
+                      </Typography>
+                      <Grid container alignItems="center" direction="column" justify="space-evenly">
+
+                        <Grid container alignItems="center" justify="space-around">
+                          <Grid item xs={3}>
+                            <Typography className={classes.text} variant="body1">
+                              University of Bath - Computer Science
+                            </Typography>
+                            <Box m={2}>
+                            <Divider className={classes.divider} variant="inset" ></Divider>
+                            </Box>
+                          </Grid>
+                          <Grid item xs={6}>
+                          <Typography className={classes.italics} variant="body1">
+                            Classes : Mathematical Foundations, Reinforcement Learning, Functional Programming, Compilers, Individual Project, System Architecture, Databases
+                          </Typography>
+                          </Grid>
+                          <Grid item xs={3}>
+                            <Typography className={classes.text} variant="body1">
+                              2019-2022
+                            </Typography>
+                          </Grid>
+                        </Grid>
+
+                        <Grid container alignItems="center" justify="space-around">
+                          <Grid item xs={3}>
+                            <Typography className={classes.text} variant="body1">
+                              Peter Symonds College
+                            </Typography>
+                            <Box m={2}>
+                            <Divider className={classes.divider} variant="inset" ></Divider>
+                            </Box>
+                          </Grid>
+                          <Grid item xs={6}>
+                          <Typography className={classes.italics} variant="body1">
+                            A Levels : Computer Science, Philosophy, Economics, Mathematics (Self-Taught)
+                          </Typography>
+                          </Grid>
+                          <Grid item xs={3}>
+                            <Typography className={classes.text} variant="body1">
+                              2016-2018
+                            </Typography>
+                          </Grid>
+                        </Grid>
+                          
                       </Grid>
                     </CardContent>         
                   </Card>
